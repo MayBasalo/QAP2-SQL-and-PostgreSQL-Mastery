@@ -1,38 +1,46 @@
-University Course Enrollment System
-This database system manages information about students, professors, courses, and enrollments.
+QAP2 - SQL and PostgreSQL Mastery
+This repository contains SQL scripts for two database systems:
 
-Key Features:
+📌 University Course Enrollment System
+A database for managing students, professors, courses, and enrollments.
+
+✅ Features
 Students can enroll in multiple courses.
-Each course is taught by one professor.
-Supports data retrieval, updates, and deletions for various operations.
-Tables:
-students: Stores student information.
+Each course is assigned one professor.
+Supports data retrieval, updates, and deletions.
 
-student_id (Primary Key)
-first_name
-last_name
-email
-school_enrollment_date
-professors: Stores professor information.
+📂 Tables
+students (student_id, first_name, last_name, email, school_enrollment_date)
+professors (professor_id, first_name, last_name, department)
+courses (course_id, course_name, course_description, professor_id)
+enrollment (student_id, course_id, enrollment_date)
 
-professor_id (Primary Key)
-first_name
-last_name
-department
-courses: Stores course details.
+🛠 SQL Operations
+🔹  Create tables
+🔹  Insert data
+🔹 Retrieve enrolled students
+🔹 Update student email
+🔹 Remove a student from a course
 
-course_id (Primary Key)
-course_name
-course_description
-professor_id (Foreign Key, references professors)
-enrollments: Links students to the courses they are enrolled in.
+📌 Online Store Inventory & Orders System
+A database for tracking products, customers, orders, and order items.
 
-student_id (Foreign Key, references students)
-course_id (Foreign Key, references courses)
-enrollment_date
-SQL Operations Included:
-Create tables: Defines the structure for students, professors, courses, and enrollments.
-Insert data: Populates the tables with sample records.
-Retrieve enrolled students: Queries to list students enrolled in specific courses.
-Update student email: Allows for updating student contact information.
-Remove a student from a course: Deletes a student's enrollment from a specific course.
+✅ Features
+Customers can place multiple orders.
+Each order contains multiple products.
+Stock updates automatically when orders are placed.
+
+📂 Tables
+products (product_id, product_name, price, stock_quantity)
+customers (customer_id, first_name, last_name, email)
+orders (order_id, customer_id, order_date)
+order_items (order_id, product_id, quantity)
+
+🛠 SQL Operations
+🔹 Create tables
+🔹 Insert data
+🔹 Retrieve product stock & order details
+🔹 Update stock after purchase
+🔹 Delete orders
+
+
