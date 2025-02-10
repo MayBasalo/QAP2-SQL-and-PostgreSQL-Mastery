@@ -1,4 +1,5 @@
 QAP2 - SQL and PostgreSQL Mastery
+
 This repository contains SQL scripts for two database systems:
 
 📌 University Course Enrollment System
